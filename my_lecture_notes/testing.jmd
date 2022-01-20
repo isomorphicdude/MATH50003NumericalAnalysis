@@ -1,0 +1,54 @@
+# Numbers
+
+
+Reference: [Overton](https://cs.nyu.edu/~overton/book/)
+
+In this chapter, we introduce the [Two's-complement](https://en.wikipedia.org/wiki/Two's_complement)
+storage for integers and the 
+[IEEE Standard for Floating-Point Arithmetic](https://en.wikipedia.org/wiki/IEEE_754).
+There are many  possible ways of representing real numbers on a computer, as well as 
+the precise behaviour of operations such as addition, multiplication, etc.
+Before the 1980s each processor had potentially a different representation for 
+real numbers, as well as different behaviour for operations.  
+IEEE introduced in 1985 was a means to standardise this across
+processors so that algorithms would produce consistent and reliable results.
+
+This chapter may seem very low level for a mathematics course but there are
+two important reasons to understand the behaviour of integers and floating-point numbers:
+1. Integer arithmetic can suddenly start giving wrong negative answers when numbers
+become large.
+2. Floating-point arithmetic is very precisely defined, and can even be used
+in rigorous computations as we shall see in the problem sheets. But it is not exact
+and its important to understand how errors in computations can accumulate.
+3. Failure to understand floating-point arithmetic can cause catastrophic issues
+in practice, with the extreme example being the 
+[explosion of the Ariane 5 rocket](https://youtu.be/N6PWATvLQCY?t=86).
+
+
+In this chapter we discuss the following:
+
+1. Binary representation: Any real number can be represented in binary, that is,
+by an infinite sequence of 0s and 1s (bits). We review  binary representation.
+2. Integers:  There are multiple ways of representing integers on a computer. We discuss the 
+the different types of integers and their representation as bits, and how arithmetic operations behave 
+like modular arithmetic. As an advanced topic we discuss `BigInt`, which uses variable bit length storage.
+2. Floating-point numbers: Real numbers are stored on a computer with a finite number of bits. 
+There are three types of floating-point numbers: _normal numbers_, _subnormal numbers_, and _special numbers_.
+3. Arithmetic: Arithmetic operations in floating-point are exact up to rounding, and how the
+rounding mode can be set. This allows us to bound  errors computations.
+4. High-precision floating-point numbers: As an advanced topic, we discuss how the precision of floating-point arithmetic can be increased arbitrary
+using `BigFloat`. 
+
+Before we begin, we load two external packages. SetRounding.jl allows us 
+to set the rounding mode of floating-point arithmetic. ColorBitstring.jl
+  implements functions `printbits` (and `printlnbits`)
+which print the bits (and with a newline) of floating-point numbers in colour.
+```julia
+using SetRounding, ColorBitstring
+```
+
+
+
+## 1.  Binary representation
+
+Any integer can be presented in binary format, that is, a sequence of `0`s and `1`s.

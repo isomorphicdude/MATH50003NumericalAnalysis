@@ -1,0 +1,68 @@
+## 1. Dense Matrices
+
+**Problem 1.1** Show that `A*x` is not
+implemented as `mul(A, x)` from the lecture notes
+by finding a `Float64` example  where the bits do not match.
+
+
+
+
+## 2. Triangular Matrices
+
+**Problem 2.1** Complete the following function for performing
+back-substitution with an upper-triangular matrix:
+```julia
+ function backsubstitution(U,b)
+    n = size(U,1)
+    
+    if length(b) != n
+        error("The system is not compatible")
+    end
+        
+    x = zeros(n)  # the solution vector
+    for k = n:-1:1  # start with k=n, then k=n-1, ...
+        r = b[k]  # dummy variable
+        for j = k+1:n
+            ## TODO: update r using U[k,j] 
+            r -= U[k,j]*x[j] # equivalent to r = r-U[k,j]*x[j]
+        end
+        ## TODO: Write to x[k]
+        x[k] = r/U[k,k]
+    end
+    x
+end
+```
+
+**Problem 2.2** Write a function `forwardsubstition` for performing
+forward-substitution with a lower-triangular matrix:
+
+
+## 3. Banded matrices
+
+## 4. Orthogonal matrices
+
+**Problem (norm-preserving)** Show that orthogonal matrices preserve the 2-norm of vectors:
+$$
+\|Q 𝐯\| = \|𝐯\|.
+$$
+
+**SOLUTION**
+$$
+\|Q 𝐯\|^2 = (Q 𝐯)^⊤ Q 𝐯 = 𝐯^⊤ Q^⊤ Q 𝐯 = 𝐯^⊤  𝐯 = \|𝐯\|^2
+$$
+∎
+
+**Theorem (eigenvalues of orthogonal matrix)** Show that the eigenvalues $λ$ of an orthogonal matrix $Q$ are
+on the unit circle: $|λ| = 1$.
+
+**SOLUTION**
+Let $𝐯$ be a unit eigenvector corresponding to $λ$: $Q 𝐯 = λ 𝐯$ with $\|𝐯\| = 1$. Then
+$$
+1 = \| 𝐯 \| = \|Q 𝐯 \| =  \| λ 𝐯 \| = |λ|.
+$$
+∎
+
+**Problem** Explain why an orthogonal matrix $Q$ must be equal to $I$ if all its eigenvalues are 1.
+
+
+Draw the Householder reflection

@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<HTML lang = "en">
+<HEAD>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  
+  
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+  </script>
+
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  
+<style>
+pre.hljl {
+    border: 1px solid #ccc;
+    margin: 5px;
+    padding: 5px;
+    overflow-x: auto;
+    color: rgb(68,68,68); background-color: rgb(251,251,251); }
+pre.hljl > span.hljl-t { }
+pre.hljl > span.hljl-w { }
+pre.hljl > span.hljl-e { }
+pre.hljl > span.hljl-eB { }
+pre.hljl > span.hljl-o { }
+pre.hljl > span.hljl-k { color: rgb(148,91,176); font-weight: bold; }
+pre.hljl > span.hljl-kc { color: rgb(59,151,46); font-style: italic; }
+pre.hljl > span.hljl-kd { color: rgb(214,102,97); font-style: italic; }
+pre.hljl > span.hljl-kn { color: rgb(148,91,176); font-weight: bold; }
+pre.hljl > span.hljl-kp { color: rgb(148,91,176); font-weight: bold; }
+pre.hljl > span.hljl-kr { color: rgb(148,91,176); font-weight: bold; }
+pre.hljl > span.hljl-kt { color: rgb(148,91,176); font-weight: bold; }
+pre.hljl > span.hljl-n { }
+pre.hljl > span.hljl-na { }
+pre.hljl > span.hljl-nb { }
+pre.hljl > span.hljl-nbp { }
+pre.hljl > span.hljl-nc { }
+pre.hljl > span.hljl-ncB { }
+pre.hljl > span.hljl-nd { color: rgb(214,102,97); }
+pre.hljl > span.hljl-ne { }
+pre.hljl > span.hljl-neB { }
+pre.hljl > span.hljl-nf { color: rgb(66,102,213); }
+pre.hljl > span.hljl-nfm { color: rgb(66,102,213); }
+pre.hljl > span.hljl-np { }
+pre.hljl > span.hljl-nl { }
+pre.hljl > span.hljl-nn { }
+pre.hljl > span.hljl-no { }
+pre.hljl > span.hljl-nt { }
+pre.hljl > span.hljl-nv { }
+pre.hljl > span.hljl-nvc { }
+pre.hljl > span.hljl-nvg { }
+pre.hljl > span.hljl-nvi { }
+pre.hljl > span.hljl-nvm { }
+pre.hljl > span.hljl-l { }
+pre.hljl > span.hljl-ld { color: rgb(148,91,176); font-style: italic; }
+pre.hljl > span.hljl-s { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sa { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sb { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sc { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sd { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sdB { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sdC { color: rgb(201,61,57); }
+pre.hljl > span.hljl-se { color: rgb(59,151,46); }
+pre.hljl > span.hljl-sh { color: rgb(201,61,57); }
+pre.hljl > span.hljl-si { }
+pre.hljl > span.hljl-so { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sr { color: rgb(201,61,57); }
+pre.hljl > span.hljl-ss { color: rgb(201,61,57); }
+pre.hljl > span.hljl-ssB { color: rgb(201,61,57); }
+pre.hljl > span.hljl-nB { color: rgb(59,151,46); }
+pre.hljl > span.hljl-nbB { color: rgb(59,151,46); }
+pre.hljl > span.hljl-nfB { color: rgb(59,151,46); }
+pre.hljl > span.hljl-nh { color: rgb(59,151,46); }
+pre.hljl > span.hljl-ni { color: rgb(59,151,46); }
+pre.hljl > span.hljl-nil { color: rgb(59,151,46); }
+pre.hljl > span.hljl-noB { color: rgb(59,151,46); }
+pre.hljl > span.hljl-oB { color: rgb(102,102,102); font-weight: bold; }
+pre.hljl > span.hljl-ow { color: rgb(102,102,102); font-weight: bold; }
+pre.hljl > span.hljl-p { }
+pre.hljl > span.hljl-c { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-ch { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-cm { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-cp { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-cpB { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-cs { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-csB { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-g { }
+pre.hljl > span.hljl-gd { }
+pre.hljl > span.hljl-ge { }
+pre.hljl > span.hljl-geB { }
+pre.hljl > span.hljl-gh { }
+pre.hljl > span.hljl-gi { }
+pre.hljl > span.hljl-go { }
+pre.hljl > span.hljl-gp { }
+pre.hljl > span.hljl-gs { }
+pre.hljl > span.hljl-gsB { }
+pre.hljl > span.hljl-gt { }
+</style>
+
+
+
+  <style type="text/css">
+  @font-face {
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+}
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  font-family: monospace, monospace;
+  font-size : 0.8em;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+thead th {
+    border-bottom: 1px solid black;
+    background-color: white;
+}
+tr:nth-child(odd){
+  background-color: rgb(248,248,248);
+}
+
+
+/*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+*/
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; }
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box; }
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0; }
+}
+@media (min-width: 550px) {
+  .container {
+    width: 80%; }
+  .column,
+  .columns {
+    margin-left: 4%; }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+
+  .one.column,
+  .one.columns                    { width: 4.66666666667%; }
+  .two.columns                    { width: 13.3333333333%; }
+  .three.columns                  { width: 22%;            }
+  .four.columns                   { width: 30.6666666667%; }
+  .five.columns                   { width: 39.3333333333%; }
+  .six.columns                    { width: 48%;            }
+  .seven.columns                  { width: 56.6666666667%; }
+  .eight.columns                  { width: 65.3333333333%; }
+  .nine.columns                   { width: 74.0%;          }
+  .ten.columns                    { width: 82.6666666667%; }
+  .eleven.columns                 { width: 91.3333333333%; }
+  .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .one-third.column               { width: 30.6666666667%; }
+  .two-thirds.column              { width: 65.3333333333%; }
+
+  .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .offset-by-two.column,
+  .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .offset-by-three.column,
+  .offset-by-three.columns        { margin-left: 26%;            }
+  .offset-by-four.column,
+  .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .offset-by-five.column,
+  .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .offset-by-six.column,
+  .offset-by-six.columns          { margin-left: 52%;            }
+  .offset-by-seven.column,
+  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .offset-by-eight.column,
+  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .offset-by-nine.column,
+  .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .offset-by-ten.column,
+  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns     { margin-left: 52%; }
+
+}
+html {
+  font-size: 62.5%; }
+body {
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222; }
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 300; }
+h1 { font-size: 3.6rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 3.4rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 3.2rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 2.8rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 2.4rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+
+p {
+  margin-top: 0; }
+a {
+  color: #1EAEDB; }
+a:hover {
+  color: #0FA0CE; }
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box; }
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0; }
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #33C3F0;
+  border-color: #33C3F0; }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB; }
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #33C3F0;
+  outline: 0; }
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+fieldset {
+  padding: 0;
+  border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
+ul {
+  list-style: circle; }
+ol {
+  list-style: decimal; }
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%; }
+li > p {margin : 0;}
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1; }
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+button,
+.button {
+  margin-bottom: 1rem; }
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem; }
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 1.0rem; }
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box; }
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box; }
+.u-pull-right {
+  float: right; }
+.u-pull-left {
+  float: left; }
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1; }
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  word-break: break-all;
+  word-wrap: break-word;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+pre.hljl {
+  margin: 0 0 10px;
+  display: block;
+  background: #f5f5f5;
+  border-radius: 4px;
+  padding : 5px;
+}
+
+pre.output {
+  background: #ffffff;
+}
+
+pre.code {
+  background: #ffffff;
+}
+
+pre.julia-error {
+  color : red
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 0.9em;
+}
+
+
+@media (min-width: 400px) {}
+@media (min-width: 550px) {}
+@media (min-width: 750px) {}
+@media (min-width: 1000px) {}
+@media (min-width: 1200px) {}
+
+h1.title {margin-top : 20px}
+img {max-width : 100%}
+div.title {text-align: center;}
+
+  </style>
+</HEAD>
+
+<BODY>
+  <div class ="container">
+    <div class = "row">
+      <div class = "col-md-12 twelve columns">
+        <div class="title">
+          
+          
+          
+        </div>
+
+        <h1>Numbers</h1>
+<p>Reference: <a href="https://cs.nyu.edu/~overton/book/">Overton</a></p>
+<p>In this chapter, we introduce the <a href="https://en.wikipedia.org/wiki/Two&#39;s_complement">Two&#39;s-complement</a> storage for integers and the  <a href="https://en.wikipedia.org/wiki/IEEE_754">IEEE Standard for Floating-Point Arithmetic</a>. There are many  possible ways of representing real numbers on a computer, as well as  the precise behaviour of operations such as addition, multiplication, etc. Before the 1980s each processor had potentially a different representation for  real numbers, as well as different behaviour for operations.   IEEE introduced in 1985 was a means to standardise this across processors so that algorithms would produce consistent and reliable results.</p>
+<p>This chapter may seem very low level for a mathematics course but there are two important reasons to understand the behaviour of integers and floating-point numbers:</p>
+<ol>
+<li><p>Integer arithmetic can suddenly start giving wrong negative answers when numbers</p>
+</li>
+</ol>
+<p>become large.</p>
+<ol start="2">
+<li><p>Floating-point arithmetic is very precisely defined, and can even be used</p>
+</li>
+</ol>
+<p>in rigorous computations as we shall see in the problem sheets. But it is not exact and its important to understand how errors in computations can accumulate.</p>
+<ol start="3">
+<li><p>Failure to understand floating-point arithmetic can cause catastrophic issues</p>
+</li>
+</ol>
+<p>in practice, with the extreme example being the  <a href="https://youtu.be/N6PWATvLQCY?t&#61;86">explosion of the Ariane 5 rocket</a>.</p>
+<p>In this chapter we discuss the following:</p>
+<ol>
+<li><p>Binary representation: Any real number can be represented in binary, that is,</p>
+</li>
+</ol>
+<p>by an infinite sequence of 0s and 1s &#40;bits&#41;. We review  binary representation.</p>
+<ol start="2">
+<li><p>Integers:  There are multiple ways of representing integers on a computer. We discuss the </p>
+</li>
+</ol>
+<p>the different types of integers and their representation as bits, and how arithmetic operations behave  like modular arithmetic. As an advanced topic we discuss <code>BigInt</code>, which uses variable bit length storage.</p>
+<ol start="2">
+<li><p>Floating-point numbers: Real numbers are stored on a computer with a finite number of bits. </p>
+</li>
+</ol>
+<p>There are three types of floating-point numbers: <em>normal numbers</em>, <em>subnormal numbers</em>, and <em>special numbers</em>.</p>
+<ol start="3">
+<li><p>Arithmetic: Arithmetic operations in floating-point are exact up to rounding, and how the</p>
+</li>
+</ol>
+<p>rounding mode can be set. This allows us to bound  errors computations.</p>
+<ol start="4">
+<li><p>High-precision floating-point numbers: As an advanced topic, we discuss how the precision of floating-point arithmetic can be increased arbitrary</p>
+</li>
+</ol>
+<p>using <code>BigFloat</code>. </p>
+<p>Before we begin, we load two external packages. SetRounding.jl allows us  to set the rounding mode of floating-point arithmetic. ColorBitstring.jl   implements functions <code>printbits</code> &#40;and <code>printlnbits</code>&#41; which print the bits &#40;and with a newline&#41; of floating-point numbers in colour.</p>
+
+
+<pre class='hljl'>
+<span class='hljl-k'>using</span><span class='hljl-t'> </span><span class='hljl-n'>SetRounding</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>ColorBitstring</span>
+</pre>
+
+
+
+<h2>1.  Binary representation</h2>
+<p>Any integer can be presented in binary format, that is, a sequence of <code>0</code>s and <code>1</code>s.</p>
+<p><strong>Definition</strong> For <span class="math">$B_0,\ldots,B_p \in \{0,1\}$</span> denote a non-negative integer in <em>binary format</em> by:</p>
+<p class="math">\[
+(B_p\ldots B_1B_0)_2 := 2^pB_p + \cdots + 2B_1 + B_0
+\]</p>
+<p>For <span class="math">$b_1,b_2,\ldots \in \{0,1\}$</span>, Denote a non-negative real number in <em>binary format</em> by:</p>
+<p class="math">\[
+(B_p \ldots B_0.b_1b_2b_3\ldots)_2 = (B_p \ldots B_0)_2 + {b_1 \over 2} + {b_2 \over 2^2} + {b_3 \over 2^3} + \cdots
+\]</p>
+<p>First we show some examples of verifying a numbers binary representation:</p>
+<p><strong>Example &#40;integer in binary&#41;</strong> A simple integer example is <span class="math">$5 = 2^2 + 2^0 = (101)_2$</span>.</p>
+<p><strong>Example &#40;rational in binary&#41;</strong> Consider the number <code>1/3</code>.  In decimal recall that:</p>
+<p class="math">\[
+1/3 = 0.3333\ldots =  \sum_{k=1}^\infty {3 \over 10^k}
+\]</p>
+<p>We will see that in binary</p>
+<p class="math">\[
+1/3 = (0.010101\ldots)_2 = \sum_{k=1}^\infty {1 \over 2^{2k}}
+\]</p>
+<p>Both results can be proven using the geometric series:</p>
+<p class="math">\[
+\sum_{k=0}^\infty z^k = {1 \over 1 - z}
+\]</p>
+<p>provided <span class="math">$|z| < 1$</span>. That is, with <span class="math">$z = {1 \over 4}$</span> we verify the binary expansion:</p>
+<p class="math">\[
+\sum_{k=1}^\infty {1 \over 4^k} = {1 \over 1 - 1/4} - 1 = {1 \over 3}
+\]</p>
+<p>A similar argument with <span class="math">$z = 1/10$</span> shows the decimal case.</p>
+<h2>2. Integers</h2>
+<p>On a computer one typically represents integers by a finite number of <span class="math">$p$</span> bits, with <span class="math">$2^p$</span> possible combinations of 0s and 1s. For <em>unsigned integers</em> &#40;non-negative integers&#41;  these bits are just the first <span class="math">$p$</span> binary digits: <span class="math">$(B_{p-1}\ldots B_1B_0)_2$</span>.</p>
+<p>Integers on a computer follow <a href="https://en.wikipedia.org/wiki/Modular_arithmetic">modular arithmetic</a>:</p>
+<p><strong>Definition &#40;ring of integers modulo <span class="math">$m$</span>&#41;</strong> Denote the ring</p>
+<p class="math">\[
+{\mathbb Z}_{m} := \{0 \ ({\rm mod}\ m), 1 \ ({\rm mod}\ m), \ldots, m-1 \ ({\rm mod}\ m) \}
+\]</p>
+<p>Integers represented with <span class="math">$p$</span>-bits on a computer actually  represent elements of <span class="math">${\mathbb Z}_{2^p}$</span> and integer arithmetic on a computer is  equivalent to arithmetic modulo <span class="math">$2^p$</span>.</p>
+<p><strong>Example &#40;addition of 8-bit unsigned integers&#41;</strong> Consider the addition of two 8-bit numbers:</p>
+<p class="math">\[
+255 + 1 = (11111111)_2 + (00000001)_2 = (100000000)_2 = 256
+\]</p>
+<p>The result is impossible to store in just 8-bits&#33; It is way too slow for a computer to increase the number of bits, or to throw an error &#40;checks are slow&#41;. So instead it treats the integers as elements of <span class="math">${\mathbb Z}_{256}$</span>:</p>
+<p class="math">\[
+255 + 1 \ ({\rm mod}\ 256) = (00000000)_2 \ ({\rm mod}\ 256) = 0 \ ({\rm mod}\ 256)
+\]</p>
+<p>We can see this in Julia:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>x</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>UInt8</span><span class='hljl-p'>(</span><span class='hljl-ni'>255</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-n'>y</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>UInt8</span><span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-nf'>printbits</span><span class='hljl-p'>(</span><span class='hljl-n'>x</span><span class='hljl-p'>);</span><span class='hljl-t'> </span><span class='hljl-nf'>println</span><span class='hljl-p'>(</span><span class='hljl-s'>&quot; + &quot;</span><span class='hljl-p'>);</span><span class='hljl-t'> </span><span class='hljl-nf'>printbits</span><span class='hljl-p'>(</span><span class='hljl-n'>y</span><span class='hljl-p'>);</span><span class='hljl-t'> </span><span class='hljl-nf'>println</span><span class='hljl-p'>(</span><span class='hljl-s'>&quot; = &quot;</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-nf'>printbits</span><span class='hljl-p'>(</span><span class='hljl-n'>x</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-n'>y</span><span class='hljl-p'>)</span>
+</pre>
+
+
+<pre class="output">
+11111111 &#43; 
+00000001 &#61; 
+00000000
+</pre>
+
+
+<p><strong>Example &#40;multiplication of 8-bit unsigned integers&#41;</strong>  Multiplication works similarly: for example,</p>
+<p class="math">\[
+254 * 2 \ ({\rm mod}\ 256) = 252 \ ({\rm mod}\ 256) = (11111100)_2 \ ({\rm mod}\ 256)
+\]</p>
+<p>We can see this behaviour in code by printing the bits:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>x</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>UInt8</span><span class='hljl-p'>(</span><span class='hljl-ni'>254</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-cs'># 254 represented in 8-bits as an unsigned integer</span><span class='hljl-t'>
+</span><span class='hljl-n'>y</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>UInt8</span><span class='hljl-p'>(</span><span class='hljl-ni'>2</span><span class='hljl-p'>)</span><span class='hljl-t'>   </span><span class='hljl-cs'>#   2 represented in 8-bits as an unsigned integer</span><span class='hljl-t'>
+</span><span class='hljl-nf'>printbits</span><span class='hljl-p'>(</span><span class='hljl-n'>x</span><span class='hljl-p'>);</span><span class='hljl-t'> </span><span class='hljl-nf'>println</span><span class='hljl-p'>(</span><span class='hljl-s'>&quot; * &quot;</span><span class='hljl-p'>);</span><span class='hljl-t'> </span><span class='hljl-nf'>printbits</span><span class='hljl-p'>(</span><span class='hljl-n'>y</span><span class='hljl-p'>);</span><span class='hljl-t'> </span><span class='hljl-nf'>println</span><span class='hljl-p'>(</span><span class='hljl-s'>&quot; = &quot;</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-nf'>printbits</span><span class='hljl-p'>(</span><span class='hljl-n'>x</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-n'>y</span><span class='hljl-p'>)</span>
+</pre>
+
+
+<pre class="output">
+11111110 * 
+00000010 &#61; 
+11111100
+</pre>
+
+
+<h3>Signed integer</h3>
+<p>Signed integers use the <a href="https://epubs.siam.org/doi/abs/10.1137/1.9780898718072.ch3">Two&#39;s complemement</a> convention. The convention is if the first bit is 1 then the number is negative: the number <span class="math">$2^p - y$</span> is interpreted as <span class="math">$-y$</span>. Thus for <span class="math">$p = 8$</span> we are interpreting <span class="math">$2^7$</span> through <span class="math">$2^8-1$</span> as negative numbers. </p>
+<p><strong>Example &#40;converting bits to signed integers&#41;</strong>  What 8-bit integer has the bits <code>01001001</code>? Adding the corresponding decimal places we get:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-ni'>2</span><span class='hljl-oB'>^</span><span class='hljl-ni'>0</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-oB'>^</span><span class='hljl-ni'>3</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-oB'>^</span><span class='hljl-ni'>6</span>
+</pre>
+
+
+<pre class="output">
+73
+</pre>
+
+
+<p>What 8-bit &#40;signed&#41; integer has the bits <code>11001001</code>? Because the first bit is <code>1</code> we know it&#39;s a negative  number, hence we need to sum the bits but then subtract <code>2^p</code>:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-ni'>2</span><span class='hljl-oB'>^</span><span class='hljl-ni'>0</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-oB'>^</span><span class='hljl-ni'>3</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-oB'>^</span><span class='hljl-ni'>6</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-oB'>^</span><span class='hljl-ni'>7</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-oB'>^</span><span class='hljl-ni'>8</span>
+</pre>
+
+
+<pre class="output">
+-55
+</pre>
+
+
+<p>We can check the results using <code>printbits</code>:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>printlnbits</span><span class='hljl-p'>(</span><span class='hljl-nf'>Int8</span><span class='hljl-p'>(</span><span class='hljl-ni'>73</span><span class='hljl-p'>))</span><span class='hljl-t'>
+</span><span class='hljl-nf'>printbits</span><span class='hljl-p'>(</span><span class='hljl-oB'>-</span><span class='hljl-nf'>Int8</span><span class='hljl-p'>(</span><span class='hljl-ni'>55</span><span class='hljl-p'>))</span>
+</pre>
+
+
+<pre class="output">
+01001001
+11001001
+</pre>
+
+
+<p>Arithmetic works precisely the same for signed and unsigned integers.</p>
+<p><strong>Example &#40;addition of 8-bit integers&#41;</strong> Consider <code>&#40;-1&#41; &#43; 1</code> in 8-bit arithmetic. The number <span class="math">$-1$</span> has the same bits as <span class="math">$2^8 - 1 = 255$</span>. Thus this is equivalent to the previous question and we get the correct result of <code>0</code>. In other words:</p>
+<p class="math">\[
+-1 + 1 \ ({\rm mod}\ 2^p) = 2^p-1  + 1 \ ({\rm mod}\ 2^p) = 2^p \ ({\rm mod}\ 2^p) = 0 \ ({\rm mod}\ 2^p)
+\]</p>
+<p><strong>Example &#40;multiplication of 8-bit integers&#41;</strong> Consider <code>&#40;-2&#41; * 2</code>. <span class="math">$-2$</span> has the same bits as <span class="math">$2^{256} - 2 = 254$</span> and <span class="math">$-4$</span> has the same bits as <span class="math">$2^{256}-4 = 252$</span>, and hence from the previous example we get the correct result of <code>-4</code>. In other words:</p>
+<p class="math">\[
+(-2) * 2 \ ({\rm mod}\ 2^p) = (2^p-2) * 2 \ ({\rm mod}\ 2^p) = 2^{p+1}-4 \ ({\rm mod}\ 2^p) = -4 \ ({\rm mod}\ 2^p)
+\]</p>
+<p><strong>Example &#40;overflow&#41;</strong> We can find the largest and smallest instances of a type using <code>typemax</code> and <code>typemin</code>:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>printlnbits</span><span class='hljl-p'>(</span><span class='hljl-nf'>typemax</span><span class='hljl-p'>(</span><span class='hljl-n'>Int8</span><span class='hljl-p'>))</span><span class='hljl-t'> </span><span class='hljl-cs'># 2^7-1 = 127</span><span class='hljl-t'>
+</span><span class='hljl-nf'>printbits</span><span class='hljl-p'>(</span><span class='hljl-nf'>typemin</span><span class='hljl-p'>(</span><span class='hljl-n'>Int8</span><span class='hljl-p'>))</span><span class='hljl-t'> </span><span class='hljl-cs'># -2^7 = -128</span>
+</pre>
+
+
+<pre class="output">
+01111111
+10000000
+</pre>
+
+
+<p>As explained, due to modular arithmetic, when we add <code>1</code> to the largest 8-bit integer we get the smallest:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>typemax</span><span class='hljl-p'>(</span><span class='hljl-n'>Int8</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-nf'>Int8</span><span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-cs'># returns typemin(Int8)</span>
+</pre>
+
+
+<pre class="output">
+-128
+</pre>
+
+
+<p>This behaviour is often not desired and is known as <em>overflow</em>, and one must be wary of using integers close to their largest value.</p>
+<h3>Variable bit representation &#40;<strong>advanced</strong>&#41;</h3>
+<p>An alternative representation for integers uses a variable number of bits, with the advantage of avoiding overflow but with the disadvantage of a substantial speed penalty. In Julia these are <code>BigInt</code>s, which we can create by calling <code>big</code> on an integer:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>x</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>typemax</span><span class='hljl-p'>(</span><span class='hljl-n'>Int64</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-nf'>big</span><span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-cs'># Too big to be an `Int64`</span>
+</pre>
+
+
+<pre class="output">
+9223372036854775808
+</pre>
+
+
+<p>Note in this case addition automatically promotes an <code>Int64</code> to a <code>BigInt</code>. We can create very large numbers using <code>BigInt</code>:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>x</span><span class='hljl-oB'>^</span><span class='hljl-ni'>100</span>
+</pre>
+
+
+<pre class="output">
+308299402527763474570010682154566572137179853330569745885534227792109373198
+447640470596653941241089824056172991237203850122889314192108015240464239377
+659907729443406151990542412460139422694360143091643438371471672472022733159
+695061370166103454894838872109766727543876375812850840329719945826027770730
+120246098009381841416708056334276148239586243518509394244354072236315177002
+222178324395959253133606299849420991475240801906072080512453438264605109361
+381484864606203866242348750432604436120370843048930586423433380140154714002
+337629571838339036072866290023067143715171661582628684226791756074958601816
+573949210192042971926128564012559683306389156286526215702602395591987379284
+682309585448452092050934594471287167569179082769090777848505882924858894568
+168528817978796393118106206809246398429622597308249405630795808918972670167
+873557636539414623207691708807594905363669045958112877309721274696727649649
+601081087800063823914375007554316324004987448998664232743644123445804025448
+082503822047990459461530060239055638579924527680558002493780472302931956594
+201351581704871454345525023520878974570116527956902624814539521898506299183
+170783021797439315846606778519958103771496882062824105186711983296636153004
+791033906572655026074103671610093220596965508325771424407112022165467934046
+108400156032167602544380124835543930597492387362414798072811058145280610901
+173900506006060422808766749928885121870507880736423792545581389057525756998
+145009099711769746929923409439498484057402540146394209901941336109623390905
+611742766343976495491640159256565111157141476925718770456826870124308204483
+840020135761385100647110424482884227023263774739896271187541348841577264708
+857112527293249071721746826360468332593346955562978550702077536636800275361
+270990152624845632820964329212289967743661388636076587788674818529924999492
+184318357313040349631189661494939940979601130119128006720905325934191881396
+7552543176532349157376
+</pre>
+
+
+<p>Note the number of bits is not fixed, the larger the number, the more bits required  to represent it, so while overflow is impossible, it is possible to run out of memory if a number is astronomically large: go ahead and try <code>x^x</code> &#40;at your own risk&#41;.</p>
+<h2>Division</h2>
+<p>In addition to <code>&#43;</code>, <code>-</code>, and <code>*</code> we have integer division <code>÷</code>, which rounds down:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-ni'>5</span><span class='hljl-t'> </span><span class='hljl-oB'>÷</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-t'> </span><span class='hljl-cs'># equivalent to div(5,2)</span>
+</pre>
+
+
+<pre class="output">
+2
+</pre>
+
+
+<p>Standard division <code>/</code> &#40;or <code>\</code> for division on the right&#41; creates a floating-point number, which will be discussed shortly:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-ni'>5</span><span class='hljl-t'> </span><span class='hljl-oB'>/</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-t'> </span><span class='hljl-cs'># alternatively 2 \ 5</span>
+</pre>
+
+
+<pre class="output">
+2.5
+</pre>
+
+
+<p>We can also create rational numbers using <code>//</code>:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-oB'>//</span><span class='hljl-ni'>2</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-ni'>3</span><span class='hljl-oB'>//</span><span class='hljl-ni'>4</span><span class='hljl-p'>)</span>
+</pre>
+
+
+<pre class="output">
+5//4
+</pre>
+
+
+<p>Rational arithmetic often leads to overflow so it is often best to combine <code>big</code> with rationals:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>big</span><span class='hljl-p'>(</span><span class='hljl-ni'>102324</span><span class='hljl-p'>)</span><span class='hljl-oB'>//</span><span class='hljl-ni'>132413023</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-ni'>23434545</span><span class='hljl-oB'>//</span><span class='hljl-ni'>4243061</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-ni'>23434545</span><span class='hljl-oB'>//</span><span class='hljl-ni'>42430534435</span>
+</pre>
+
+
+<pre class="output">
+26339037835007648477541540//4767804878707544364596461
+</pre>
+
+
+<h2>3. Floating-point numbers</h2>
+<p>Floating-point numbers are a subset of real numbers that are representable using a fixed number of bits.</p>
+<p><strong>Definition &#40;floating-point numbers&#41;</strong> Given integers <span class="math">$σ$</span> &#40;the &quot;exponential shift&quot;&#41; <span class="math">$Q$</span> &#40;the number of exponent bits&#41; and  <span class="math">$S$</span> &#40;the precision&#41;, define the set of <em>Floating-point numbers</em> by dividing into <em>normal</em>, <em>sub-normal</em>, and <em>special number</em> subsets:</p>
+<p class="math">\[
+F_{σ,Q,S} := F^{\rm normal}_{σ,Q,S} \cup F^{\rm sub}_{σ,Q,S} \cup F^{\rm special}.
+\]</p>
+<p>The <em>normal numbers</em> <span class="math">$F^{\rm normal}_{σ,Q,S} \subset {\mathbb R}$</span> are defined by</p>
+<p class="math">\[
+F^{\rm normal}_{σ,Q,S} = \{\pm 2^{q-σ} \times (1.b_1b_2b_3\ldots b_S)_2 : 1 \leq q < 2^Q-1 \}.
+\]</p>
+<p>The <em>sub-normal numbers</em> <span class="math">$F^{\rm sub}_{σ,Q,S} \subset {\mathbb R}$</span> are defined as</p>
+<p class="math">\[
+F^{\rm sub}_{σ,Q,S} = \{\pm 2^{1-σ} \times (0.b_1b_2b_3\ldots b_S)_2\}.
+\]</p>
+<p>The <em>special numbers</em> <span class="math">$F^{\rm special} \not\subset {\mathbb R}$</span> are defined later.</p>
+<p>Note this set of real numbers has no nice algebraic structure: it is not closed under addition, subtraction, etc. We will therefore need to define approximate versions of algebraic operations later.</p>
+<p>Floating-point numbers are stored in <span class="math">$1 + Q + S$</span> total number of bits, in the format</p>
+<p class="math">\[
+sq_{Q-1}\ldots q_0 b_1 \ldots b_S
+\]</p>
+<p>The first bit &#40;<span class="math">$s$</span>&#41; is the &lt;span style&#61;&quot;color:red&quot;&gt;sign bit&lt;/span&gt;: 0 means positive and 1 means negative. The bits <span class="math">$q_{Q-1}\ldots q_0$</span> are the &lt;span style&#61;&quot;color:green&quot;&gt;exponent bits&lt;/span&gt;: they are the binary digits of the unsigned integer <span class="math">$q$</span>: </p>
+<p class="math">\[
+q = (q_{Q-1}\ldots q_0)_2.
+\]</p>
+<p>Finally, the bits <span class="math">$b_1\ldots b_S$</span> are the &lt;span style&#61;&quot;color:blue&quot;&gt;significand bits&lt;/span&gt;. If <span class="math">$1 \leq q < 2^Q-1$</span> then the bits represent the normal number</p>
+<p class="math">\[
+x = \pm 2^{q-σ} \times (1.b_1b_2b_3\ldots b_S)_2.
+\]</p>
+<p>If <span class="math">$q = 0$</span> &#40;i.e. all bits are 0&#41; then the bits represent the sub-normal number</p>
+<p class="math">\[
+x = \pm 2^{1-σ} \times (0.b_1b_2b_3\ldots b_S)_2.
+\]</p>
+<p>If <span class="math">$q = 2^Q-1$</span>  &#40;i.e. all bits are 1&#41; then the bits represent a special number, discussed later.</p>
+<h3>IEEE floating-point numbers</h3>
+<p><strong>Definition &#40;IEEE floating-point numbers&#41;</strong>  IEEE has 3 standard floating-point formats: 16-bit &#40;half precision&#41;, 32-bit &#40;single precision&#41; and 64-bit &#40;double precision&#41; defined by:</p>
+<p class="math">\[
+\begin{align*}
+F_{16} &:= F_{15,5,10} \\
+F_{32} &:= F_{127,8,23} \\
+F_{64} &:= F_{1023,11,52}
+\end{align*}
+\]</p>
+<p>In Julia these correspond to 3 different floating-point types:</p>
+<ol>
+<li><p><code>Float64</code> is a type representing double precision &#40;<span class="math">$F_{64}$</span>&#41;.</p>
+</li>
+</ol>
+<p>We can create a <code>Float64</code> by including a  decimal point when writing the number:  <code>1.0</code> is a <code>Float64</code>. <code>Float64</code> is the default format for  scientific computing &#40;on the <em>Floating-Point Unit</em>, FPU&#41;.  </p>
+<ol start="2">
+<li><p><code>Float32</code> is a type representing single precision &#40;<span class="math">$F_{32}$</span>&#41;.  We can create a <code>Float32</code> by including a </p>
+</li>
+</ol>
+<p><code>f0</code> when writing the number:  <code>1f0</code> is a <code>Float32</code>. <code>Float32</code> is generally the default format for graphics &#40;on the <em>Graphics Processing Unit</em>, GPU&#41;,  as the difference between 32 bits and 64 bits is indistinguishable to the eye in visualisation, and more data can be fit into a GPU&#39;s limitted memory.</p>
+<ol start="3">
+<li><p><code>Float16</code> is a type representing half-precision &#40;<span class="math">$F_{16}$</span>&#41;.</p>
+</li>
+</ol>
+<p>It is important in machine learning where one wants to maximise the amount of data and high accuracy is not necessarily helpful. </p>
+<p><strong>Example &#40;rational in <code>Float32</code>&#41;</strong> How is the number <span class="math">$1/3$</span> stored in <code>Float32</code>? Recall that</p>
+<p class="math">\[
+1/3 = (0.010101\ldots)_2 = 2^{-2} (1.0101\ldots)_2 = 2^{125-127} (1.0101\ldots)_2
+\]</p>
+<p>and since &#36; 125 &#61; &#40;1111101&#41;<em>2 &#36;  the &lt;span style&#61;&quot;color:green&quot;&gt;exponent bits&lt;/span&gt; are <code>01111101</code>. .  For the significand we round the last bit to the nearest element of F</em>&#123;32&#125;&#36;, &#40;this is explained in detail in the section on rounding&#41;, so we have</p>
+<p class="math">\[
+1.010101010101010101010101\ldots \approx 1.01010101010101010101011 \in F_{32} 
+\]</p>
+<p>and the &lt;span style&#61;&quot;color:blue&quot;&gt;significand bits&lt;/span&gt; are <code>01010101010101010101011</code>. Thus the <code>Float32</code> bits for <span class="math">$1/3$</span> are:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>printbits</span><span class='hljl-p'>(</span><span class='hljl-nfB'>1f0</span><span class='hljl-oB'>/</span><span class='hljl-ni'>3</span><span class='hljl-p'>)</span>
+</pre>
+
+
+<pre class="output">
+00111110101010101010101010101011
+</pre>
+
+
+<p>For sub-normal numbers, the simplest example is zero, which has <span class="math">$q=0$</span> and all significand bits zero:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>printbits</span><span class='hljl-p'>(</span><span class='hljl-nfB'>0.0</span><span class='hljl-p'>)</span>
+</pre>
+
+
+<pre class="output">
+0000000000000000000000000000000000000000000000000000000000000000
+</pre>
+
+
+<p>Unlike integers, we also have a negative zero:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>printbits</span><span class='hljl-p'>(</span><span class='hljl-oB'>-</span><span class='hljl-nfB'>0.0</span><span class='hljl-p'>)</span>
+</pre>
+
+
+<pre class="output">
+1000000000000000000000000000000000000000000000000000000000000000
+</pre>
+
+
+<p>This is treated as identical to <code>0.0</code> &#40;except for degenerate operations as explained in special numbers&#41;.</p>
+<h3>Special normal numbers</h3>
+<p>When dealing with normal numbers there are some important constants that we will use to bound errors.</p>
+<p><strong>Definition &#40;machine epsilon/smallest positive normal number/largest normal number&#41;</strong> <em>Machine epsilon</em> is denoted</p>
+<p class="math">\[
+ϵ_{{\rm m},S} := 2^{-S}.
+\]</p>
+<p>When <span class="math">$S$</span> is implied by context we use the notation <span class="math">$ϵ_{\rm m}$</span>. The <em>smallest positive normal number</em> is <span class="math">$q = 1$</span> and <span class="math">$b_k$</span> all zero:</p>
+<p class="math">\[
+\min |F_{σ,Q,S}^{\rm normal}| = 2^{1-σ}
+$$ 
+where $|A| := $\{|x| : x \in A \}$.
+The _largest (positive) normal number_ is 
+\]</p>
+<p>\max F<em>&#123;σ,Q,S&#125;^&#123;\rm normal&#125; &#61; 2^&#123;2^Q-2-σ&#125; &#40;1.11\ldots1&#41;</em>2 &#61; 2^&#123;2^Q-2-σ&#125; &#40;2-ϵ_&#123;\rm m&#125;&#41; &#36;</p>
+<p>We confirm the simple bit representations:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>σ</span><span class='hljl-p'>,</span><span class='hljl-n'>Q</span><span class='hljl-p'>,</span><span class='hljl-n'>S</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>127</span><span class='hljl-p'>,</span><span class='hljl-ni'>23</span><span class='hljl-p'>,</span><span class='hljl-ni'>8</span><span class='hljl-t'> </span><span class='hljl-cs'># Float32</span><span class='hljl-t'>
+</span><span class='hljl-n'>εₘ</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nfB'>2.0</span><span class='hljl-oB'>^</span><span class='hljl-p'>(</span><span class='hljl-oB'>-</span><span class='hljl-n'>S</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-nf'>printlnbits</span><span class='hljl-p'>(</span><span class='hljl-nf'>Float32</span><span class='hljl-p'>(</span><span class='hljl-nfB'>2.0</span><span class='hljl-oB'>^</span><span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-oB'>-</span><span class='hljl-n'>σ</span><span class='hljl-p'>)))</span><span class='hljl-t'> </span><span class='hljl-cs'># smallest positive Float32</span><span class='hljl-t'>
+</span><span class='hljl-nf'>printlnbits</span><span class='hljl-p'>(</span><span class='hljl-nf'>Float32</span><span class='hljl-p'>(</span><span class='hljl-nfB'>2.0</span><span class='hljl-oB'>^</span><span class='hljl-p'>(</span><span class='hljl-ni'>2</span><span class='hljl-oB'>^</span><span class='hljl-n'>Q</span><span class='hljl-oB'>-</span><span class='hljl-ni'>2</span><span class='hljl-oB'>-</span><span class='hljl-n'>σ</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-ni'>2</span><span class='hljl-oB'>-</span><span class='hljl-n'>εₘ</span><span class='hljl-p'>)))</span><span class='hljl-t'> </span><span class='hljl-cs'># largest Float32</span>
+</pre>
+
+
+<pre class="output">
+00000000100000000000000000000000
+01111111100000000000000000000000
+</pre>
+
+
+<p>For a given floating-point type, we can find these constants using the following functions:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>eps</span><span class='hljl-p'>(</span><span class='hljl-n'>Float32</span><span class='hljl-p'>),</span><span class='hljl-nf'>floatmin</span><span class='hljl-p'>(</span><span class='hljl-n'>Float32</span><span class='hljl-p'>),</span><span class='hljl-nf'>floatmax</span><span class='hljl-p'>(</span><span class='hljl-n'>Float32</span><span class='hljl-p'>)</span>
+</pre>
+
+
+<pre class="output">
+&#40;1.1920929f-7, 1.1754944f-38, 3.4028235f38&#41;
+</pre>
+
+
+<p><strong>Example &#40;creating a sub-normal number&#41;</strong> If we divide the smallest normal number by two, we get a subnormal number: </p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>mn</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>floatmin</span><span class='hljl-p'>(</span><span class='hljl-n'>Float32</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-cs'># smallest normal Float32</span><span class='hljl-t'>
+</span><span class='hljl-nf'>printlnbits</span><span class='hljl-p'>(</span><span class='hljl-n'>mn</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-nf'>printbits</span><span class='hljl-p'>(</span><span class='hljl-n'>mn</span><span class='hljl-oB'>/</span><span class='hljl-ni'>2</span><span class='hljl-p'>)</span>
+</pre>
+
+
+<pre class="output">
+00000000100000000000000000000000
+00000000010000000000000000000000
+</pre>
+
+
+<p>Can you explain the bits?</p>
+<h3>Special numbers</h3>
+<p>The special numbers extend the real line by adding <span class="math">$\pm \infty$</span> but also a notion of &quot;not-a-number&quot;.</p>
+<p><strong>Definition &#40;not a number&#41;</strong> Let <span class="math">${\rm NaN}$</span> represent &quot;not a number&quot; and define</p>
+<p class="math">\[
+F^{\rm special} := \{\infty, -\infty, {\rm NaN}\}
+\]</p>
+<p>Whenever the bits of <span class="math">$q$</span> of a floating-point number are all 1 then they represent an element of <span class="math">$F^{\rm special}$</span>. If all <span class="math">$b_k=0$</span>, then the number represents either <span class="math">$\pm\infty$</span>, called <code>Inf</code> and <code>-Inf</code> for 64-bit floating-point numbers &#40;or <code>Inf16</code>, <code>Inf32</code> for 16-bit and 32-bit, respectively&#41;:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>printlnbits</span><span class='hljl-p'>(</span><span class='hljl-n'>Inf16</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-nf'>printbits</span><span class='hljl-p'>(</span><span class='hljl-oB'>-</span><span class='hljl-n'>Inf16</span><span class='hljl-p'>)</span>
+</pre>
+
+
+<pre class="output">
+0111110000000000
+1111110000000000
+</pre>
+
+
+<p>All other special floating-point numbers represent <span class="math">${\rm NaN}$</span>. One particular representation of <span class="math">${\rm NaN}$</span>  is denoted by <code>NaN</code> for 64-bit floating-point numbers &#40;or <code>NaN16</code>, <code>NaN32</code> for 16-bit and 32-bit, respectively&#41;:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>printbits</span><span class='hljl-p'>(</span><span class='hljl-n'>NaN16</span><span class='hljl-p'>)</span>
+</pre>
+
+
+<pre class="output">
+0111111000000000
+</pre>
+
+
+<p>These are needed for undefined algebraic operations such as:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-ni'>0</span><span class='hljl-oB'>/</span><span class='hljl-ni'>0</span>
+</pre>
+
+
+<pre class="output">
+NaN
+</pre>
+
+
+<p><strong>Example &#40;many <code>NaN</code>s&#41;</strong> What happens if we change some other <span class="math">$b_k$</span> to be nonzero? We can create bits as a string and see:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>i</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>parse</span><span class='hljl-p'>(</span><span class='hljl-n'>UInt16</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-s'>&quot;0111110000010001&quot;</span><span class='hljl-p'>;</span><span class='hljl-t'> </span><span class='hljl-n'>base</span><span class='hljl-oB'>=</span><span class='hljl-ni'>2</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-nf'>reinterpret</span><span class='hljl-p'>(</span><span class='hljl-n'>Float16</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>i</span><span class='hljl-p'>)</span>
+</pre>
+
+
+<pre class="output">
+NaN16
+</pre>
+
+
+<p>Thus, there are more than one <code>NaN</code>s on a computer.  </p>
+<h2>4. Arithmetic</h2>
+<p>Arithmetic operations on floating-point numbers are  <em>exact up to rounding</em>. There are three basic rounding strategies: round up/down/nearest. Mathematically we introduce a function to capture the notion of rounding:</p>
+<p><strong>Definition &#40;rounding&#41;</strong> <span class="math">${\rm fl}^{\rm up}_{σ,Q,S} : \mathbb R \rightarrow F_{σ,Q,S}$</span> denotes  the function that rounds a real number up to the nearest floating-point number that is greater or equal. <span class="math">${\rm fl}^{\rm down}_{σ,Q,S} : \mathbb R \rightarrow F_{σ,Q,S}$</span> denotes  the function that rounds a real number down to the nearest floating-point number that is greater or equal. <span class="math">${\rm fl}^{\rm nearest}_{σ,Q,S} : \mathbb R \rightarrow F_{σ,Q,S}$</span> denotes  the function that rounds a real number to the nearest floating-point number. In case of a tie, it returns the floating-point number whose least significant bit is equal to zero. We use the notation <span class="math">${\rm fl}$</span> when <span class="math">$σ,Q,S$</span> and the rounding mode are implied by context, with <span class="math">${\rm fl}^{\rm nearest}$</span> being the default rounding mode.</p>
+<p>In Julia, the rounding mode is specified by tags <code>RoundUp</code>, <code>RoundDown</code>, and <code>RoundNearest</code>. &#40;There are also more exotic rounding strategies <code>RoundToZero</code>, <code>RoundNearestTiesAway</code> and <code>RoundNearestTiesUp</code> that we won&#39;t use.&#41;</p>
+<p><strong>WARNING &#40;rounding performance, advanced&#41;</strong> These rounding modes are part of the FPU instruction set so will be &#40;roughly&#41; equally fast as the default, <code>RoundNearest</code>. Unfortunately, changing the rounding mode is expensive, and is not thread-safe.</p>
+<p>Let&#39;s try rounding a <code>Float64</code> to a <code>Float32</code>.</p>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>printlnbits</span><span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-oB'>/</span><span class='hljl-ni'>3</span><span class='hljl-p'>)</span><span class='hljl-t'>  </span><span class='hljl-cs'># 64 bits</span><span class='hljl-t'>
+</span><span class='hljl-nf'>printbits</span><span class='hljl-p'>(</span><span class='hljl-nf'>Float32</span><span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-oB'>/</span><span class='hljl-ni'>3</span><span class='hljl-p'>))</span><span class='hljl-t'>  </span><span class='hljl-cs'># round to nearest 32-bit</span>
+</pre>
+
+
+<pre class="output">
+0011111111010101010101010101010101010101010101010101010101010101
+00111110101010101010101010101011
+</pre>
+
+
+<p>The default rounding mode can be changed:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>printbits</span><span class='hljl-p'>(</span><span class='hljl-nf'>Float32</span><span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-oB'>/</span><span class='hljl-ni'>3</span><span class='hljl-p'>,</span><span class='hljl-n'>RoundDown</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-p'>)</span>
+</pre>
+
+
+<pre class="output">
+00111110101010101010101010101010
+</pre>
+
+
+<p>Or alternatively we can change the rounding mode for a chunk of code using <code>setrounding</code>. The following computes upper and lower bounds for <code>/</code>:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>x</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nfB'>1f0</span><span class='hljl-t'>
+</span><span class='hljl-nf'>setrounding</span><span class='hljl-p'>(</span><span class='hljl-n'>Float32</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>RoundDown</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-k'>do</span><span class='hljl-t'>
+    </span><span class='hljl-n'>x</span><span class='hljl-oB'>/</span><span class='hljl-ni'>3</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span><span class='hljl-p'>,</span><span class='hljl-t'>
+</span><span class='hljl-nf'>setrounding</span><span class='hljl-p'>(</span><span class='hljl-n'>Float32</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>RoundUp</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-k'>do</span><span class='hljl-t'>
+    </span><span class='hljl-n'>x</span><span class='hljl-oB'>/</span><span class='hljl-ni'>3</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span>
+</pre>
+
+
+<pre class="output">
+&#40;0.3333333f0, 0.33333334f0&#41;
+</pre>
+
+
+<p><strong>WARNING &#40;compiled constants, advanced&#41;</strong>: Why did we first create a variable <code>x</code> instead of typing <code>1f0/3</code>? This is due to a very subtle issue where the compiler is <em>too clever for it&#39;s own good</em>:  it recognises <code>1f0/3</code> can be computed at compile time, but failed to recognise the rounding mode was changed. </p>
+<p>In IEEE arithmetic, the arithmetic operations <code>&#43;</code>, <code>-</code>, <code>*</code>, <code>/</code> are defined by the property that they are exact up to rounding.  Mathematically we denote these operations as follows:</p>
+<p class="math">\[
+\begin{aligned}
+x\oplus y &:= {\rm fl}(x+y) \\
+x\ominus y &:= {\rm fl}(x - y) \\
+x\otimes y &:= {\rm fl}(x * y) \\
+x\oslash y &:= {\rm fl}(x / y)
+\end{aligned}
+\]</p>
+<p>Note also that  <code>^</code> and <code>sqrt</code> are similarly exact up to rounding.</p>
+<p><strong>Example &#40;decimal is not exact&#41;</strong> <code>1.1&#43;0.1</code> gives a different result than <code>1.2</code>:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>x</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nfB'>1.1</span><span class='hljl-t'>
+</span><span class='hljl-n'>y</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nfB'>0.1</span><span class='hljl-t'>
+</span><span class='hljl-n'>x</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-n'>y</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-nfB'>1.2</span><span class='hljl-t'> </span><span class='hljl-cs'># Not Zero?!?</span>
+</pre>
+
+
+<pre class="output">
+2.220446049250313e-16
+</pre>
+
+
+<p>This is because <span class="math">${\rm fl}(1.1) \neq 1+1/10$</span>, but rather:</p>
+<p class="math">\[
+{\rm fl}(1.1) = 1 + 2^{-4}+2^{-5} + 2^{-8}+2^{-9}+\cdots + 2^{-48}+2^{-49} + 2^{-51}
+\]</p>
+<p><strong>WARNING &#40;non-associative&#41;</strong> These operations are not associative&#33; E.g. <span class="math">$(x \oplus y) \oplus z$</span> is not necessarily equal to <span class="math">$x \oplus (y \oplus z)$</span>.  Commutativity is preserved, at least. Here is a surprising example of non-associativity:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-p'>(</span><span class='hljl-nfB'>1.1</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-nfB'>1.2</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-nfB'>1.3</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nfB'>1.1</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-nfB'>1.2</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-nfB'>1.3</span><span class='hljl-p'>)</span>
+</pre>
+
+
+<pre class="output">
+&#40;3.5999999999999996, 3.6&#41;
+</pre>
+
+
+<p>Can you explain this in terms of bits?</p>
+<h3>Bounding errors in floating point arithmetic</h3>
+<p>Before we dicuss bounds on errors, we need to talk about the two notions of errors:</p>
+<p><strong>Definition &#40;absolute/relative error&#41;</strong> If <span class="math">$\tilde x = x + δ_{rm a} = x (1 + δ_{\rm r})$</span> then  <span class="math">$|δ_{\rm a}|$</span> is called the <em>absolute error</em> and <span class="math">$|δ_{\rm r}|$</span> is called the  <em>relative error</em> in approximating <span class="math">$x$</span> by <span class="math">$\tilde x$</span>.</p>
+<p>We can bound the error of basic arithmetic operations in terms of machine epsilon, provided a real number is close to a normal number:</p>
+<p><strong>Definition &#40;normalised range&#41;</strong> The <em>normalised range</em> <span class="math">${\cal N}_{σ,Q,S} \subset {\mathbb R}$</span> is the subset of real numbers that lies between the smallest and largest normal floating-point number:</p>
+<p class="math">\[
+{\cal N}_{σ,Q,S} := \{x : \min |F_{σ,Q,S}| \leq |x| \leq \max F_{σ,Q,S} \}
+\]</p>
+<p>When <span class="math">$σ,Q,S$</span> are implied by context we use the notation <span class="math">${\cal N}$</span>.</p>
+<p>We can use machine epsilon to determine bounds on rounding:</p>
+<p><strong>Proposition &#40;rounding arithmetic&#41;</strong> If <span class="math">$x \in {\cal N}$</span> then </p>
+<p class="math">\[
+{\rm fl}^{\rm mode}(x) = x (1 + \delta_x^{\rm mode})
+\]</p>
+<p>where the <em>relative error</em> is</p>
+<p class="math">\[
+\begin{aligned}
+|\delta_x^{\rm nearest}| &\leq {ϵ_{\rm m} \over 2} \\
+|\delta_x^{\rm up/down}| &< {ϵ_{\rm m}}.
+\end{aligned}
+\]</p>
+<p>This immediately implies relative error bounds on all IEEE arithmetic operations, e.g.,  if <span class="math">$x+y \in {\cal N}$</span> then we have</p>
+<p class="math">\[
+x \oplus y = (x+y) (1 + \delta_1)
+\]</p>
+<p>where &#40;assuming the default nearest rounding&#41; &#36; |\delta<em>1| \leq &#123;ϵ</em>&#123;\rm m&#125; \over 2&#125;. &#36;</p>
+<p><strong>Example &#40;bounding a simple computation&#41;</strong> We show how to bound the error in computing</p>
+<p class="math">\[
+(1.1 + 1.2) + 1.3
+\]</p>
+<p>using floating-point arithmetic. First note that <code>1.1</code> on a computer is in fact <span class="math">${\rm fl}(1.1)$</span>. Thus this computation becomes</p>
+<p class="math">\[
+({\rm fl}(1.1) \oplus {\rm fl}(1.2)) \oplus {\rm fl}(1.3)
+\]</p>
+<p>First we find</p>
+<p class="math">\[
+({\rm fl}(1.1) \oplus {\rm fl}(1.2)) = (1.1(1 + δ_1) + 1.2 (1+δ_2))(1 + δ_3)
+ = 2.3 + 1.1 δ_1 + 1.2 δ_2 + 2.3 δ_3 + 1.1 δ_1 δ_3 + 1.2 δ_2 δ_3
+ = 2.3 + δ_4
+ $$
+where (note $δ_1 δ_3$ and $δ_2 δ_3$ are tiny so we just round up our bound to the nearest decimal)
+\]</p>
+<p>|δ<em>4| \leq 2.3 ϵ</em>&#123;\rm m&#125;</p>
+<p class="math">\[
+Thus the computation becomes
+\]</p>
+<p>&#40;&#40;2.3 &#43; δ<em>4&#41; &#43; 1.3 &#40;1 &#43; δ</em>5&#41;&#41; &#40;1 &#43; δ<em>6&#41; &#61; 3.6 &#43; δ</em>4 &#43; 1.3 δ<em>5 &#43; 3.6 δ</em>6 &#43; δ<em>4 δ</em>6  &#43; 1.3 δ<em>5 δ</em>6 &#61; 3.6 &#43; δ_7</p>
+<p class="math">\[
+where the _absolute error_ is
+\]</p>
+<p>|δ<em>7| \leq 4.8 ϵ</em>&#123;\rm m&#125; &#36; Indeed, this bound is bigger than the observed error:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>abs</span><span class='hljl-p'>(</span><span class='hljl-nfB'>3.6</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-p'>(</span><span class='hljl-nfB'>1.1</span><span class='hljl-oB'>+</span><span class='hljl-nfB'>1.2</span><span class='hljl-oB'>+</span><span class='hljl-nfB'>1.3</span><span class='hljl-p'>)),</span><span class='hljl-t'> </span><span class='hljl-nfB'>4.8</span><span class='hljl-nf'>eps</span><span class='hljl-p'>()</span>
+</pre>
+
+
+<pre class="output">
+&#40;4.440892098500626e-16, 1.0658141036401502e-15&#41;
+</pre>
+
+
+<h3>Arithmetic and special numbers</h3>
+<p>Arithmetic works differently on <code>Inf</code> and <code>NaN</code> and for undefined operations.  In particular we have:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-ni'>1</span><span class='hljl-oB'>/</span><span class='hljl-nfB'>0.0</span><span class='hljl-t'>        </span><span class='hljl-cs'>#  Inf</span><span class='hljl-t'>
+</span><span class='hljl-ni'>1</span><span class='hljl-oB'>/</span><span class='hljl-p'>(</span><span class='hljl-oB'>-</span><span class='hljl-nfB'>0.0</span><span class='hljl-p'>)</span><span class='hljl-t'>     </span><span class='hljl-cs'># -Inf</span><span class='hljl-t'>
+</span><span class='hljl-nfB'>0.0</span><span class='hljl-oB'>/</span><span class='hljl-nfB'>0.0</span><span class='hljl-t'>      </span><span class='hljl-cs'>#  NaN</span><span class='hljl-t'>
+  
+</span><span class='hljl-n'>Inf</span><span class='hljl-oB'>*</span><span class='hljl-ni'>0</span><span class='hljl-t'>        </span><span class='hljl-cs'>#  NaN</span><span class='hljl-t'>
+</span><span class='hljl-n'>Inf</span><span class='hljl-oB'>+</span><span class='hljl-ni'>5</span><span class='hljl-t'>        </span><span class='hljl-cs'>#  Inf</span><span class='hljl-t'>
+</span><span class='hljl-p'>(</span><span class='hljl-oB'>-</span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-oB'>*</span><span class='hljl-n'>Inf</span><span class='hljl-t'>     </span><span class='hljl-cs'># -Inf</span><span class='hljl-t'>
+</span><span class='hljl-ni'>1</span><span class='hljl-oB'>/</span><span class='hljl-n'>Inf</span><span class='hljl-t'>        </span><span class='hljl-cs'>#  0.0</span><span class='hljl-t'>
+</span><span class='hljl-ni'>1</span><span class='hljl-oB'>/</span><span class='hljl-p'>(</span><span class='hljl-oB'>-</span><span class='hljl-n'>Inf</span><span class='hljl-p'>)</span><span class='hljl-t'>     </span><span class='hljl-cs'># -0.0</span><span class='hljl-t'>
+</span><span class='hljl-n'>Inf</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-n'>Inf</span><span class='hljl-t'>    </span><span class='hljl-cs'>#  NaN</span><span class='hljl-t'>
+</span><span class='hljl-n'>Inf</span><span class='hljl-t'> </span><span class='hljl-oB'>==</span><span class='hljl-t'>  </span><span class='hljl-n'>Inf</span><span class='hljl-t'>  </span><span class='hljl-cs'>#  true</span><span class='hljl-t'>
+</span><span class='hljl-n'>Inf</span><span class='hljl-t'> </span><span class='hljl-oB'>==</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-n'>Inf</span><span class='hljl-t'>  </span><span class='hljl-cs'>#  false</span><span class='hljl-t'>
+
+</span><span class='hljl-n'>NaN</span><span class='hljl-oB'>*</span><span class='hljl-ni'>0</span><span class='hljl-t'>        </span><span class='hljl-cs'>#  NaN</span><span class='hljl-t'>
+</span><span class='hljl-n'>NaN</span><span class='hljl-oB'>+</span><span class='hljl-ni'>5</span><span class='hljl-t'>        </span><span class='hljl-cs'>#  NaN</span><span class='hljl-t'>
+</span><span class='hljl-ni'>1</span><span class='hljl-oB'>/</span><span class='hljl-n'>NaN</span><span class='hljl-t'>        </span><span class='hljl-cs'>#  NaN</span><span class='hljl-t'>
+</span><span class='hljl-n'>NaN</span><span class='hljl-t'> </span><span class='hljl-oB'>==</span><span class='hljl-t'> </span><span class='hljl-n'>NaN</span><span class='hljl-t'>   </span><span class='hljl-cs'>#  false</span><span class='hljl-t'>
+</span><span class='hljl-n'>NaN</span><span class='hljl-t'> </span><span class='hljl-oB'>!=</span><span class='hljl-t'> </span><span class='hljl-n'>NaN</span><span class='hljl-t'>   </span><span class='hljl-cs'>#  true</span>
+</pre>
+
+
+<pre class="output">
+true
+</pre>
+
+
+<h3>Special functions &#40;advanced&#41;</h3>
+<p>Other special functions like <code>cos</code>, <code>sin</code>, <code>exp</code>, etc. are <em>not</em> part of the IEEE standard. Instead, they are implemented by composing the basic arithmetic operations, which accumulate errors. Fortunately many are  designed to have <em>relative accuracy</em>, that is, <code>s &#61; sin&#40;x&#41;</code>  &#40;that is, the Julia implementation of <span class="math">$\sin x$</span>&#41; satisfies</p>
+<p class="math">\[
+{\tt s} = (\sin x) ( 1 + \delta)
+\]</p>
+<p>where <span class="math">$|\delta| < cϵ_{\rm m}$</span> for a reasonably small <span class="math">$c > 0$</span>, <em>provided</em> that <span class="math">$x \in {\rm F}^{\rm normal}$</span>. Note these special functions are written in &#40;advanced&#41; Julia code, for example,  <a href="https://github.com/JuliaLang/julia/blob/d08b05df6f01cf4ec6e4c28ad94cedda76cc62e8/base/special/trig.jl#L76">sin</a>.</p>
+<p><strong>WARNING &#40;sin&#40;fl&#40;x&#41;&#41; is not always close to sin&#40;x&#41;&#41;</strong> This is possibly a misleading statement when one thinks of <span class="math">$x$</span> as a real number. Consider <span class="math">$x = \pi$</span> so that <span class="math">$\sin x = 0$</span>. However, as <span class="math">${\rm fl}(\pi) \neq \pi$</span>. Thus we only have relative accuracy compared to the floating point approximation:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>π₆₄</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>Float64</span><span class='hljl-p'>(</span><span class='hljl-n'>π</span><span class='hljl-p'>)</span><span class='hljl-t'>
+</span><span class='hljl-n'>πᵦ</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>big</span><span class='hljl-p'>(</span><span class='hljl-n'>π₆₄</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-cs'># Convert 64-bit approximation of π to higher precision. Note its the same number.</span><span class='hljl-t'>
+</span><span class='hljl-nf'>abs</span><span class='hljl-p'>(</span><span class='hljl-nf'>sin</span><span class='hljl-p'>(</span><span class='hljl-n'>π₆₄</span><span class='hljl-p'>)),</span><span class='hljl-t'> </span><span class='hljl-nf'>abs</span><span class='hljl-p'>(</span><span class='hljl-nf'>sin</span><span class='hljl-p'>(</span><span class='hljl-n'>π₆₄</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-nf'>sin</span><span class='hljl-p'>(</span><span class='hljl-n'>πᵦ</span><span class='hljl-p'>))</span><span class='hljl-t'> </span><span class='hljl-cs'># only has relative accuracy compared to sin(πᵦ), not sin(π)</span>
+</pre>
+
+
+<pre class="output">
+&#40;1.2246467991473532e-16, 2.994769809718339860754263822337778811430799841054
+596882794158676581342467643355e-33&#41;
+</pre>
+
+
+<p>Another issue is when <span class="math">$x$</span> is very large:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>ε</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>eps</span><span class='hljl-p'>()</span><span class='hljl-t'> </span><span class='hljl-cs'># machine epsilon, 2^(-52)</span><span class='hljl-t'>
+</span><span class='hljl-n'>x</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-oB'>*</span><span class='hljl-nfB'>10.0</span><span class='hljl-oB'>^</span><span class='hljl-ni'>100</span><span class='hljl-t'>
+</span><span class='hljl-nf'>abs</span><span class='hljl-p'>(</span><span class='hljl-nf'>sin</span><span class='hljl-p'>(</span><span class='hljl-n'>x</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-nf'>sin</span><span class='hljl-p'>(</span><span class='hljl-nf'>big</span><span class='hljl-p'>(</span><span class='hljl-n'>x</span><span class='hljl-p'>)))</span><span class='hljl-t'>  </span><span class='hljl-oB'>≤</span><span class='hljl-t'>  </span><span class='hljl-nf'>abs</span><span class='hljl-p'>(</span><span class='hljl-nf'>sin</span><span class='hljl-p'>(</span><span class='hljl-nf'>big</span><span class='hljl-p'>(</span><span class='hljl-n'>x</span><span class='hljl-p'>)))</span><span class='hljl-t'> </span><span class='hljl-oB'>*</span><span class='hljl-t'> </span><span class='hljl-n'>ε</span>
+</pre>
+
+
+<pre class="output">
+true
+</pre>
+
+
+<p>But if we instead compute <code>10^100</code> using <code>BigFloat</code> we get a completely different answer that even has the wrong sign&#33;</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>x̃</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-oB'>*</span><span class='hljl-nf'>big</span><span class='hljl-p'>(</span><span class='hljl-nfB'>10.0</span><span class='hljl-p'>)</span><span class='hljl-oB'>^</span><span class='hljl-ni'>100</span><span class='hljl-t'>
+</span><span class='hljl-nf'>sin</span><span class='hljl-p'>(</span><span class='hljl-n'>x</span><span class='hljl-p'>),</span><span class='hljl-t'> </span><span class='hljl-nf'>sin</span><span class='hljl-p'>(</span><span class='hljl-n'>x̃</span><span class='hljl-p'>)</span>
+</pre>
+
+
+<pre class="output">
+&#40;-0.703969872087777, 0.6911910845037462219623751594978914260403966392716944
+990360937340001300242965408&#41;
+</pre>
+
+
+<p>This is because we commit an error on the order of roughly</p>
+<p class="math">\[
+2 * 10^{100} * ϵ_{\rm m} \approx 4.44 * 10^{84}
+\]</p>
+<p>when we round <span class="math">$2*10^{100}$</span> to the nearest float. </p>
+<p><strong>Example &#40;polynomial near root&#41;</strong>  For general functions we do not generally have relative accuracy.  For example, consider a simple polynomial <span class="math">$1 + 4x + x^2$</span> which has a root at <span class="math">$\sqrt 3 - 2$</span>. But</p>
+
+
+<pre class='hljl'>
+<span class='hljl-n'>f</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>x</span><span class='hljl-t'> </span><span class='hljl-oB'>-&gt;</span><span class='hljl-t'> </span><span class='hljl-ni'>1</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-ni'>4</span><span class='hljl-n'>x</span><span class='hljl-t'> </span><span class='hljl-oB'>+</span><span class='hljl-t'> </span><span class='hljl-n'>x</span><span class='hljl-oB'>^</span><span class='hljl-ni'>2</span><span class='hljl-t'>
+</span><span class='hljl-n'>x</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>sqrt</span><span class='hljl-p'>(</span><span class='hljl-ni'>3</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-ni'>2</span><span class='hljl-t'>
+</span><span class='hljl-n'>abserr</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-nf'>abs</span><span class='hljl-p'>(</span><span class='hljl-nf'>f</span><span class='hljl-p'>(</span><span class='hljl-nf'>big</span><span class='hljl-p'>(</span><span class='hljl-n'>x</span><span class='hljl-p'>))</span><span class='hljl-t'> </span><span class='hljl-oB'>-</span><span class='hljl-t'> </span><span class='hljl-nf'>f</span><span class='hljl-p'>(</span><span class='hljl-n'>x</span><span class='hljl-p'>))</span><span class='hljl-t'>
+</span><span class='hljl-n'>relerr</span><span class='hljl-t'> </span><span class='hljl-oB'>=</span><span class='hljl-t'> </span><span class='hljl-n'>abserr</span><span class='hljl-oB'>/</span><span class='hljl-nf'>abs</span><span class='hljl-p'>(</span><span class='hljl-nf'>f</span><span class='hljl-p'>(</span><span class='hljl-n'>x</span><span class='hljl-p'>))</span><span class='hljl-t'>
+</span><span class='hljl-n'>abserr</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>relerr</span><span class='hljl-t'> </span><span class='hljl-cs'># very large relative error</span>
+</pre>
+
+
+<pre class="output">
+&#40;6.808194126854568545271553503125001640528110233296921194323658710345625877
+380371e-19, 0.0019623283540971669935970567166805267333984375000000000000000
+00000000000000000008&#41;
+</pre>
+
+
+<p>We can see this in the error bound &#40;note that <span class="math">$4x$</span> is exact for floating point numbers and adding <span class="math">$1$</span> is exact for this particular <span class="math">$x$</span>&#41;:</p>
+<p class="math">\[
+(x \otimes x \oplus 4x) + 1 = (x^2 (1 + \delta_1) + 4x)(1+\delta_2) + 1 = x^2 + 4x + 1 + \delta_1 x^2 + 4x \delta_2 + x^2 \delta_1 \delta_2
+\]</p>
+<p>Using a simple bound <span class="math">$|x| < 1$</span> we get a &#40;pessimistic&#41; bound on the absolute error of <span class="math">$3 ϵ_{\rm m}$</span>. Here <code>f&#40;x&#41;</code> itself is less than <span class="math">$2 ϵ_{\rm m}$</span> so this does not imply relative accuracy. &#40;Of course, a bad upper bound is not the same as a proof of inaccuracy, but here we observe the inaccuracy in practice.&#41;</p>
+<h2>5. High-precision floating-point numbers &#40;advanced&#41;</h2>
+<p>It is possible to set the precision of a floating-point number using the <code>BigFloat</code> type, which results from the usage of <code>big</code> when the result is not an integer. For example, here is an approximation of 1/3 accurate to 77 decimal digits:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>big</span><span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-oB'>/</span><span class='hljl-ni'>3</span>
+</pre>
+
+
+<pre class="output">
+0.3333333333333333333333333333333333333333333333333333333333333333333333333
+333348
+</pre>
+
+
+<p>Note we can set the rounding mode as in <code>Float64</code>, e.g.,  this gives &#40;rigorous&#41; bounds on <code>1/3</code>:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>setrounding</span><span class='hljl-p'>(</span><span class='hljl-n'>BigFloat</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>RoundDown</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-k'>do</span><span class='hljl-t'>
+  </span><span class='hljl-nf'>big</span><span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-oB'>/</span><span class='hljl-ni'>3</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nf'>setrounding</span><span class='hljl-p'>(</span><span class='hljl-n'>BigFloat</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>RoundUp</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-k'>do</span><span class='hljl-t'>
+  </span><span class='hljl-nf'>big</span><span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-oB'>/</span><span class='hljl-ni'>3</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span>
+</pre>
+
+
+<pre class="output">
+&#40;0.333333333333333333333333333333333333333333333333333333333333333333333333
+3333305, 0.3333333333333333333333333333333333333333333333333333333333333333
+333333333333348&#41;
+</pre>
+
+
+<p>We can also increase the precision, e.g., this finds bounds on <code>1/3</code> accurate to  more than 1000 decimal places:</p>
+
+
+<pre class='hljl'>
+<span class='hljl-nf'>setprecision</span><span class='hljl-p'>(</span><span class='hljl-ni'>4_000</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-k'>do</span><span class='hljl-t'> </span><span class='hljl-cs'># 4000 bit precision</span><span class='hljl-t'>
+  </span><span class='hljl-nf'>setrounding</span><span class='hljl-p'>(</span><span class='hljl-n'>BigFloat</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>RoundDown</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-k'>do</span><span class='hljl-t'>
+    </span><span class='hljl-nf'>big</span><span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-oB'>/</span><span class='hljl-ni'>3</span><span class='hljl-t'>
+  </span><span class='hljl-k'>end</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-nf'>setrounding</span><span class='hljl-p'>(</span><span class='hljl-n'>BigFloat</span><span class='hljl-p'>,</span><span class='hljl-t'> </span><span class='hljl-n'>RoundUp</span><span class='hljl-p'>)</span><span class='hljl-t'> </span><span class='hljl-k'>do</span><span class='hljl-t'>
+    </span><span class='hljl-nf'>big</span><span class='hljl-p'>(</span><span class='hljl-ni'>1</span><span class='hljl-p'>)</span><span class='hljl-oB'>/</span><span class='hljl-ni'>3</span><span class='hljl-t'>
+  </span><span class='hljl-k'>end</span><span class='hljl-t'>
+</span><span class='hljl-k'>end</span>
+</pre>
+
+
+<pre class="output">
+&#40;0.333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333308, 0.33333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+333333333333333333333333333333333333333333333333333333333333333333333333333
+3333333333333333346&#41;
+</pre>
+
+
+<p>In the problem sheet we shall see how this can be used to rigorously bound <span class="math">${\rm e}$</span>, accurate to 1000 digits. </p>
+
+
+        <HR/>
+        <div class="footer">
+          <p>
+            Published from <a href="Numbers.jmd">Numbers.jmd</a>
+            using <a href="http://github.com/JunoLab/Weave.jl">Weave.jl</a> v0.10.10 on 2022-01-20.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BODY>
+
+</HTML>
