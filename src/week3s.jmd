@@ -1,10 +1,11 @@
-# MATH50003 Numerical Analysis: Problem 3
+# MATH50003 Numerical Analysis: Problem Sheet 3
 
 This problem sheet explores implementation of triangular solves,
 supporting a matrix with two super-diagonals, as well as
 permutation and Householder reflections that can be applied to a vector in
 $O(n)$ complexity.
 
+Questions marked with a ⋆ are meant to be completed without using a computer.
 
 ```julia
 using LinearAlgebra, Test
