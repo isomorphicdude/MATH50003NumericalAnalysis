@@ -26,3 +26,7 @@ Manifest.toml
 *.ipynb_checkpoints
 .DS_Store
 .DS_Store
+
+my_notebooks/
+my_sheets/
+my_lecture_notes/
