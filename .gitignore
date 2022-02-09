@@ -28,5 +28,5 @@ Manifest.toml
 .DS_Store
 
 my_notebooks/
-my_sheets/
+# my_sheets/
 my_lecture_notes/
