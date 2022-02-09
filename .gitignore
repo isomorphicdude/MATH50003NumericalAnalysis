@@ -30,3 +30,4 @@ Manifest.toml
 my_notebooks/
 # my_sheets/
 my_lecture_notes/
+.vscode/settings.json
