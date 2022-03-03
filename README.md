@@ -46,8 +46,8 @@ interpolation, fast multiplication of polynomials, computing derivatives, solvin
 
 ## Assessment
 
-1. Practice late-term exam (computer-based Julia exam, not for credit): 4 March 2022 (TBC)
-2. Late-term exam (computer-based Julia exam): 18 March 2022
+1. Practice late-term exam (computer-based Julia exam, not for credit, released on Blackboard): 4 March 2022, 3–5pm (1 hour exam, 1 hour upload/download)
+2. Late-term exam (computer-based Julia exam, released on Blackboard): 18 March 2022, 3–5pm (1 hour exam, 1 hour upload/download)
 3. Practice final exam (pen-and-paper, not for credit): Summer Term (TBC)
 3. Final exam (pen-and-paper): Summer Term (TBC)
 
@@ -62,6 +62,11 @@ interpolation, fast multiplication of polynomials, computing derivatives, solvin
 Condition numbers, indefinite integration, and Euler methods
 5. [Week 7](https://github.com/Imperial-MATH50003/MATH50003NumericalAnalysis/blob/main/sheets/week7.ipynb): 
 Two point boundary value problems, convergence, and Fourier series
+
+
+Additional problem sheets:
+
+1. [Julia Problem Sheet](https://github.com/Imperial-MATH50003/MATH50003NumericalAnalysis/blob/main/sheets/juliasheet.ipynb)
 
 
 ## Reading List
@@ -89,6 +94,13 @@ Two point boundary value problems, convergence, and Fourier series
 7. [Gram Schmidt and Reduced QR](lectures/GramSchmidt.jpg)
 7. [Householder and QR](lectures/Householder.jpg)
 7. [PLU Decomposition](lectures/PLU.jpg)
+7. [Matrix Norms](lectures/MatrixNorms.jpg)
+7. [Singular Value Decomposition](lectures/SVD.jpg)
+7. [Cholesky](lectures/Cholesky.jpg)
+7. [Condition Numbers](lectures/ConditionNumbers.jpg)
+7. [Indefinite Integration](lectures/IndefiniteIntegration.jpg)
+7. [Euler Method](lectures/EulerMethod.jpg)
+
 
 
 
