@@ -41,7 +41,7 @@ including both time-dependent ordinary differential equations and boundary value
 via the fast Fourier transform.
 2. [Orthogonal Polynomials](https://nbviewer.org/github/Imperial-MATH50003/MATH50003NumericalAnalysis/blob/main/notebooks/OrthogonalPolynomials.ipynb): we discuss orthogonal polynomials—polynomials orthogonal 
 with respect to a prescribed weight.
-2. Interpolation and Gaussian quadrature: we discuss polynomial interpolation,
+2. [Interpolation and Gaussian quadrature](https://nbviewer.org/github/Imperial-MATH50003/MATH50003NumericalAnalysis/blob/main/notebooks/Quadrature.ipynb): we discuss polynomial interpolation,
  Gaussian quadrature, and expansions in orthogonal polynomials.
 
 ## Assessment
@@ -60,7 +60,7 @@ with respect to a prescribed weight.
 4. [Week 5](https://github.com/Imperial-MATH50003/MATH50003NumericalAnalysis/blob/main/sheets/week5.ipynb) ([Solutions](https://github.com/Imperial-MATH50003/MATH50003NumericalAnalysis/blob/main/sheets/week5s.ipynb)): positive definite matrices, Cholesky, and SVD
 4. [Week 6](https://github.com/Imperial-MATH50003/MATH50003NumericalAnalysis/blob/main/sheets/week6.ipynb) ([Solutions](https://github.com/Imperial-MATH50003/MATH50003NumericalAnalysis/blob/main/sheets/week6s.ipynb)): 
 Condition numbers, indefinite integration, and Euler methods
-5. [Week 7](https://github.com/Imperial-MATH50003/MATH50003NumericalAnalysis/blob/main/sheets/week7.ipynb): 
+5. [Week 7](https://github.com/Imperial-MATH50003/MATH50003NumericalAnalysis/blob/main/sheets/week7.ipynb) ([Solutions](https://github.com/Imperial-MATH50003/MATH50003NumericalAnalysis/blob/main/sheets/week7s.ipynb)): 
 Two point boundary value problems, convergence, and Fourier series
 5. [Week 8](https://github.com/Imperial-MATH50003/MATH50003NumericalAnalysis/blob/main/sheets/week8.ipynb): 
 Discrete Fourier Transform (DFT), Fast Fourier Transform (FFT), and Orthogonal Polynomials.
