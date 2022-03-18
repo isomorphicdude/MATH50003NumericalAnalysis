@@ -113,7 +113,7 @@ $$
 **Proof**
 Note that
 $$
-p(x_j) = ∑_{k=1}^n f(x_k) ℓ_k(x_j) = f(x_k)
+p(x_j) = ∑_{k=1}^n f(x_k) ℓ_k(x_j) = f(x_j)
 $$
 so we just need to show it is unique. Suppose $p̃(x)$ is a  polynomial
 of degree at most $n-1$
@@ -241,22 +241,22 @@ q_k(x) &= T_k(x) \sqrt{2}/\sqrt{π}
 $$
 so that the Jacobi matrix is symmetric:
 $$
-x [q_0(x)|q_1(x)|…] = [q_0(x)|q_1(x)|…] \underbrace{\begin{bmatrix} 0 & 1/\sqrt{2} \\
+x [q_0(x)|q_1(x)|⋯] = [q_0(x)|q_1(x)|⋯] \underbrace{\begin{bmatrix} 0 & 1/\sqrt{2} \\
                             1/\sqrt{2} & 0 & 1/2 \\
-                            1/2 & 0 & 1/2 \\
-                                & 1/2 & 0 & ⋱ \\
-                                && ⋱ & ⋱
+                            &1/2 & 0 & 1/2 \\
+                             &   & 1/2 & 0 & ⋱ \\
+                              &  && ⋱ & ⋱
 \end{bmatrix}}_X
 $$
 We can then confirm that we have constructed an eigenvector/eigenvalue of the $3 × 3$ truncation of the Jacobi matrix,
 e.g. at $x_2 = 0$:
 $$
 \begin{bmatrix} 
-0 & 1/\sqrt{2}
+0 & 1/\sqrt{2} \\
 1/\sqrt{2} & 0 & 1/2 \\
     & 1/2 & 0\end{bmatrix} \begin{bmatrix} q_0(0) \\ q_1(0) \\ q_2(0) 
     \end{bmatrix} = {1 \over \sqrt π} \begin{bmatrix} 
-0 & 1/\sqrt{2}
+0 & 1/\sqrt{2} \\
 1/\sqrt{2} & 0 & 1/2 \\
     & 1/2 & 0\end{bmatrix} \begin{bmatrix} 1 \\ 0 \\ -{1 \over \sqrt{2}}
     \end{bmatrix} =\begin{bmatrix} 0 \\ 0 \\ 0
@@ -296,9 +296,9 @@ $$
 We have:
 $$
 \begin{align*}
-w_1 = \int_0^1 w(x) ℓ_1(x) {\rm d}x = w_1 = \int_0^1 {(x-1/4)(x-1) \over (-1/4)(-1)}{\rm d}x = -1/6 \\
-w_2 = \int_0^1 w(x) ℓ_2(x) {\rm d}x = w_2 = \int_0^1 {x(x-1) \over (1/4)(-1)}{\rm d}x = 8/9 \\
-w_3 = \int_0^1 w(x) ℓ_3(x) {\rm d}x = w_3 = \int_0^1 {x(x-1/4) \over 1/4}{\rm d}x = 5/18
+w_1 = \int_0^1 w(x) ℓ_1(x) {\rm d}x  = \int_0^1 {(x-1/4)(x-1) \over (-1/4)(-1)}{\rm d}x = -1/6 \\
+w_2 = \int_0^1 w(x) ℓ_2(x) {\rm d}x  = \int_0^1 {x(x-1) \over (1/4)(-1)}{\rm d}x = 8/9 \\
+w_3 = \int_0^1 w(x) ℓ_3(x) {\rm d}x  = \int_0^1 {x(x-1/4) \over 1/4}{\rm d}x = 5/18
 \end{align*}
 $$
 That is we have
@@ -307,10 +307,10 @@ $$
 $$
 This is indeed exact for polynomials up to degree $2$ (and no more):
 $$
-Σ_n^{w,𝐱}[1] = 1, Σ_n^{w,𝐱}[x] = 1/2, Σ_n^{w,𝐱}[x^2] = 1/3, Σ_n^{w,𝐱}[x^2] = 7/24 ≂̸ 1/4.
+Σ_n^{w,𝐱}[1] = 1, Σ_n^{w,𝐱}[x] = 1/2, Σ_n^{w,𝐱}[x^2] = 1/3, Σ_n^{w,𝐱}[x^2] = 7/24 ≠ 1/4.
 $$
 
-**Example (Chebyshev points)** Find the interpolatory quadrature rule for $w(x) = 1/sqrt{1-x^2}$ on $[0,1]$ with points equal to the
+**Example (Chebyshev roots)** Find the interpolatory quadrature rule for $w(x) = 1/\sqrt{1-x^2}$ on $[-1,1]$ with points equal to the
 roots of $T_3(x)$. This is a special case of Gaussian quadrature which we will approach in another way below. We use:
 $$
 \int_{-1}^1 w(x) {\rm d}x = π, \int_{-1}^1 xw(x) {\rm d}x = 0, \int_{-1}^1 x^2 w(x) {\rm d}x = {π/2}
@@ -318,11 +318,27 @@ $$
 Recall from before that $x_1,x_2,x_3 = \sqrt{3}/2,0,-\sqrt{3}/2$. Thus we have:
 $$
 \begin{align*}
-w_1 = \int_0^1 w(x) ℓ_1(x) {\rm d}x = w_1 = \int_0^1 {(x-1/4)(x-1) \over (-1/4)(-1)}{\rm d}x = -1/6 \\
-w_2 = \int_0^1 w(x) ℓ_2(x) {\rm d}x = w_2 = \int_0^1 {x(x-1) \over (1/4)(-1)}{\rm d}x = 8/9 \\
-w_3 = \int_0^1 w(x) ℓ_3(x) {\rm d}x = w_3 = \int_0^1 {x(x-1/4) \over 1/4}{\rm d}x = 5/18
+w_1 = \int_{-1}^1 w(x) ℓ_1(x) {\rm d}x = \int_{-1}^1 {x(x+\sqrt{3}/2) \over (\sqrt{3}/2) \sqrt{3} \sqrt{1-x^2}}{\rm d}x = {π \over 3} \\
+w_2 = \int_{-1}^1 w(x) ℓ_2(x) {\rm d}x = \int_{-1}^1 {(x-\sqrt{3}/2)(x+\sqrt{3}/2) \over (-3/4)\sqrt{1-x^2}}{\rm d}x = {π \over 3} \\
+w_3 = \int_{-1}^1 w(x) ℓ_3(x) {\rm d}x = \int_{-1}^1 {(x-\sqrt{3}/2) x \over (-\sqrt{3})(-\sqrt{3}/2) \sqrt{1-x^2}}{\rm d}x = {π \over 3}
 \end{align*}
 $$
+(It's not a coincidence that they are all the same but this will differ for roots of other OPs.) 
+That is we have
+$$
+Σ_n^{w,𝐱}[f]  = {π \over 3}(f(\sqrt{3}/2) + f(0) + f(-\sqrt{3}/2)
+$$
+This is indeed exact for polynomials up to degree $n-1=2$, but it goes all the way up to $2n-1 = 5$:
+$$
+\begin{align*}
+Σ_n^{w,𝐱}[1] &= π, Σ_n^{w,𝐱}[x] = 0, Σ_n^{w,𝐱}[x^2] = {π \over 2}, \\
+Σ_n^{w,𝐱}[x^3] &= 0, Σ_n^{w,𝐱}[x^4] &= {3 π \over 8}, Σ_n^{w,𝐱}[x^5] = 0 \\
+Σ_n^{w,𝐱}[x^6] &= {9 π \over 32} ≠ {5 π \over 16}
+\end{align*}
+$$
+We shall explain this miracle next.
+
+
 
 
 
@@ -341,8 +357,9 @@ $$
 $$
 where $x_1,…,x_n$ are the eigenvalues of $X_n$ and
 $$
-w_k = Q_n[k,1]^2 = {1 \over α_k^2}
+w_k := ∫_a^b w(x) {\rm d}x Q_n[k,1]^2 = {1 \over α_k^2}.
 $$
+(Note we have $∫_a^b w(x) {\rm d} x q_0(x)^2 = 1$.)
 
 In analogy to how Fourier series are orthogonal with respect to Trapezium rule,
 Orthogonal polynomials are orthogonal with respect to Gaussian quadrature:
@@ -376,22 +393,24 @@ interpolates $f(x)$ at the Gaussian quadrature points $x_1,…,x_n$.
 
 **Proof**
 
-Note that we can write:
+Consider the Vandermonde-like matrix:
+$$
+Ṽ := \begin{bmatrix} q_0(x_1) & ⋯ & q_{n-1}(x_1) \\
+                ⋮ & ⋱ & ⋮ \\
+                q_0(x_n) & ⋯ & q_{n-1}(x_n) \end{bmatrix}
+$$
+and define
+$$
+Q_n^w := Ṽ^⊤ \begin{bmatrix} w_1 \\ &⋱ \\&& w_n \end{bmatrix} = \begin{bmatrix} q_0(x_1)w_1 & ⋯ &  q_0(x_n) w_n \\
+                ⋮ & ⋱ & ⋮ \\
+                w_1q_{n-1}(x_1) & ⋯ & q_{n-1}(x_n)w_n \end{bmatrix}
+$$
+so that
 $$
 \begin{bmatrix}
 c_0^n \\
 ⋮ \\
-c_{n-1}^n \end{bmatrix} = Q_n^w \begin{bmatrix}
-f_1 \\
-⋮ \\
-f_n \end{bmatrix}.
-$$
-
-Consider the Vandermonde-like matrix:
-$$
-Ṽ = \begin{bmatrix} q_0(x_1) & ⋯ & q_{n-1}(x_1) \\
-                ⋮ & ⋱ & ⋮ \\
-                q_0(x_n) & ⋯ & q_{n-1}(x_n) \end{bmatrix}
+c_{n-1}^n \end{bmatrix} = Q_n^w \begin{bmatrix} f(x_1) \\ ⋮ \\ f(x_n) \end{bmatrix}.
 $$
 Note that if $p(x) = [q_0(x) | ⋯ | q_{n-1}(x)] 𝐜$ then
 $$
@@ -442,3 +461,53 @@ $$
 $$
 ∎
 
+
+**Example (Chebyshev expansions)** 
+Consider the construction of Gaussian quadrature for $n = 3$. To determine the weights we need:
+$$
+w_k^{-1} = α_k^2 = q_0(x_k)^2 + q_1(x_k)^2 + q_2(x_k)^2 = 
+{1 \over π} + {2 \over π} x_k^2 + {2 \over π} (2x_k^2-1)^2
+$$
+We can check each case and deduce that $w_k = π/3$.
+Thus we recover the interpolatory quadrature rule.
+Further, we can construct the transform
+$$
+\begin{align*}
+Q_3^w &= \begin{bmatrix}
+w_1 q_0(x_1) & w_2 q_0(x_2) & w_3 q_0(x_3) \\
+w_1 q_1(x_1) & w_2 q_1(x_2) & w_3 q_1(x_3) \\
+w_1 q_3(x_1) & w_2 q_3(x_2) & w_3 q_3(x_3) 
+\end{bmatrix}\\
+&= {π \over 3} \begin{bmatrix} 1/\sqrt{π} & 1/\sqrt{π} & 1/\sqrt{π} \\
+                                x_1\sqrt{2/π} & x_2\sqrt{2/π} & x_3\sqrt{2/π} \\
+                                (2x_1^2-1)\sqrt{2/π} &(2x_2^2-1)\sqrt{2/π} & (2x_3^2-1)\sqrt{2/π}
+                                \end{bmatrix} \\
+                                &= 
+                                {\sqrt{π} \over 3} \begin{bmatrix} 1 & 1 & 1 \\
+                                \sqrt{6}/2 & 0 & -\sqrt{6}/2 \\
+                                1/\sqrt{2} &-\sqrt{2} & 1/\sqrt{2}
+                                \end{bmatrix}
+\end{align*}
+$$
+We can use this to expand a polynomial, e.g. $x^2$:
+$$
+Q_3^2 \begin{bmatrix}
+x_1^2 \\
+x_2^2 \\
+x_3^2 
+\end{bmatrix} =  {\sqrt{π} \over 3} \begin{bmatrix} 1 & 1 & 1 \\
+                                \sqrt{6}/2 & 0 & -\sqrt{6}/2 \\
+                                1/\sqrt{2} &-\sqrt{2} & 1/\sqrt{2}
+                                \end{bmatrix} \begin{bmatrix} 3/4 \\ 0 \\ 3/4 \end{bmatrix}
+                                =
+                                \begin{bmatrix}
+                                {\sqrt{π} / 2} \\
+                                0 \\
+                                {\sqrt{π} / (2\sqrt{2})}
+                                \end{bmatrix}
+$$
+In other words:
+$$
+x^2 = {\sqrt π \over 2} q_0(x) + {\sqrt π \over 2\sqrt 2} q_2(x) = {1 \over 2} T_0(x) + {1 \over 2} T_2(x)
+$$
+which can be easily confirmed.
