@@ -38,6 +38,7 @@ notebook("src/week2.jmd"; pkwds...)
 notebook("src/week4.jmd"; pkwds...)
 notebook("src/week5.jmd"; pkwds...)
 notebook("src/week9.jmd"; pkwds...)
+notebook("src/week10.jmd"; pkwds...)
 notebook("src/advanced1.jmd"; pkwds...)
 notebook("src/advanced2.jmd"; pkwds...)
 notebook("src/advanced3.jmd"; pkwds...)
@@ -55,6 +56,7 @@ notebook("src/week6s.jmd"; skwds...)
 notebook("src/week7s.jmd"; skwds...)
 notebook("src/week8s.jmd"; skwds...)
 notebook("src/week9s.jmd"; skwds...)
+notebook("src/week10s.jmd"; skwds...)
 
 
 ##
